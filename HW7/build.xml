@@ -1,0 +1,18 @@
+<?xml version="1.0"?>    
+<project  default="run" name="HW7" > 
+	 <target name="run" depends="compile"> 
+        
+	 		<java classname="edu.umb.cs.cs681.hw07.ClientCode">
+	 			
+	 			<classpath path="bin"/>
+	 		</java>
+	 	</target>
+	<target name="compile">
+		<echo> -------------------------------------- Deleting bin--------------------------------------------------------------</echo>	
+			<delete dir="bin" />
+			<echo> -------------------------------------- Creating Bin-------------------------------</echo>
+			<mkdir dir="bin" />
+		 <javac srcdir="./src" destdir="bin" includeantruntime="false"/>
+	</target>
+  
+</project>
